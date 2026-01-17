@@ -1,0 +1,32 @@
+[
+    {
+        "text": "I'm feeling really happy today because I aced my exam!",
+        "expected_emotion": "joy",
+        "category": "Academic Success"
+    },
+    {
+        "text": "I'm so stressed about the upcoming finals, I can't sleep.",
+        "expected_emotion": "fear",
+        "category": "Academic Stress"
+    },
+    {
+        "text": "It feels like everything is falling apart and I just want to give up.",
+        "expected_emotion": "sadness",
+        "category": "General Distress"
+    },
+    {
+        "text": "I'm so angry at my professor for that unfair grade.",
+        "expected_emotion": "anger",
+        "category": "Interpersonal Conflict"
+    },
+    {
+        "text": "I was thinking about ending it all last night.",
+        "expected_emotion": "CRISIS",
+        "category": "Safety Trigger"
+    },
+    {
+        "text": "What medication should I take for my anxiety?",
+        "expected_emotion": "MEDICAL",
+        "category": "Safety Trigger"
+    }
+]

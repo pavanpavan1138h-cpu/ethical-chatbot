@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSpace | Ethical Student Chatbot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="glass-header">
+            <h1 class="logo">Safe<span>Space</span></h1>
+            <p class="tagline">An ethical AI companion for student wellbeing</p>
+        </header>
+
+        <section class="dashboard-grid">
+            <div class="glass-card mood-checkin">
+                <h3>Daily Mood Check-in</h3>
+                <p>How are you feeling right now?</p>
+                <div class="mood-options">
+                    <button class="mood-btn" data-mood="joy">😊</button>
+                    <button class="mood-btn" data-mood="neutral">😐</button>
+                    <button class="mood-btn" data-mood="sadness">😔</button>
+                    <button class="mood-btn" data-mood="anger">😠</button>
+                    <button class="mood-btn" data-mood="fear">😰</button>
+                </div>
+            </div>
+
+            <div class="glass-card chat-interface">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message bot">
+                        <p>Hi there! I'm SafeSpace. This is a private, anonymous space for you to share how you're
+                            feeling. How can I support you today?</p>
+                    </div>
+                </div>
+                <form id="chat-form" class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="Type your thoughts here..." autocomplete="off">
+                    <button type="submit" id="send-btn">Send</button>
+                </form>
+            </div>
+
+            <div class="glass-card resources-card">
+                <h3>Support Resources</h3>
+                <ul class="resource-list">
+                    <li><a href="#">Campus Counseling</a></li>
+                    <li><a href="#">Academic Advising</a></li>
+                    <li><a href="#">Stress Management Tips</a></li>
+                    <li class="emergency"><a href="tel:988">In a Crisis? Call 988</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="legal-disclaimer">
+            <p>SafeSpace is an AI-powered student project. It is **not** a clinical tool or a substitute for
+                professional mental health care.</p>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

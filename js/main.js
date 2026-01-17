@@ -24,13 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({ session_id: sessionId, text: text })
             });
 
+            if (!response.ok) throw new Error('Backend not responding');
+
             const data = await response.json();
             addMessage(data.response, 'bot');
         } catch (error) {
-            console.error('Error:', error);
-            addMessage("I'm having trouble connecting to my brain right now. Please make sure the backend is running.", 'bot');
+            console.warn('Backend connection failed. Switching to Local Demo Mode.');
+            // Local Mock AI Fallback for testing without a backend
+            const mockResponse = getMockResponse(text);
+            setTimeout(() => {
+                addMessage(mockResponse + " (Demo Mode)", 'bot');
+            }, 500);
         }
     });
+
+    // Simple keyword-based mock AI for Demo Mode
+    function getMockResponse(text) {
+        const lowerText = text.toLowerCase();
+        if (lowerText.includes('happy') || lowerText.includes('great')) return "I'm so glad to hear that! Keep that positive energy going.";
+        if (lowerText.includes('sad') || lowerText.includes('bad')) return "I'm sorry you're feeling down. I'm here to listen.";
+        if (lowerText.includes('stress') || lowerText.includes('exam')) return "Academic stress can be tough. Remember to take a break and breathe.";
+        if (lowerText.includes('angry') || lowerText.includes('frustrate')) return "It's okay to feel frustrated. Take your time to vent.";
+        return "I hear you. Tell me more about how you're feeling?";
+    }
 
     // Handle Mood Check-ins
     moodBtns.forEach(btn => {

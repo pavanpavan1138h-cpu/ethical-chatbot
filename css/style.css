@@ -168,6 +168,16 @@ body {
     border-radius: 15px;
     font-size: 0.95rem;
     line-height: 1.4;
+    animation: fadeIn 0.4s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .message.bot {
@@ -181,6 +191,48 @@ body {
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 2px;
+}
+
+/* Typing Indicator Styling */
+.typing {
+    display: flex;
+    gap: 4px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 15px;
+    width: fit-content;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.typing span {
+    width: 8px;
+    height: 8px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+.typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
 }
 
 .chat-input-area {

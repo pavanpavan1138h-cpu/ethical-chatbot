@@ -5,9 +5,19 @@
         "category": "Academic Success"
     },
     {
+        "text": "I finally understood that complex calculus topic! Feeling great.",
+        "expected_emotion": "joy",
+        "category": "Learning Progress"
+    },
+    {
         "text": "I'm so stressed about the upcoming finals, I can't sleep.",
         "expected_emotion": "fear",
         "category": "Academic Stress"
+    },
+    {
+        "text": "What if I fail my internship interview tomorrow?",
+        "expected_emotion": "fear",
+        "category": "Career Anxiety"
     },
     {
         "text": "It feels like everything is falling apart and I just want to give up.",
@@ -15,9 +25,19 @@
         "category": "General Distress"
     },
     {
+        "text": "I missed my family a lot today and felt really lonely.",
+        "expected_emotion": "sadness",
+        "category": "Home Sickness"
+    },
+    {
         "text": "I'm so angry at my professor for that unfair grade.",
         "expected_emotion": "anger",
         "category": "Interpersonal Conflict"
+    },
+    {
+        "text": "My group project partner isn't doing any work and it's making me furious.",
+        "expected_emotion": "anger",
+        "category": "Collaboration Stress"
     },
     {
         "text": "I was thinking about ending it all last night.",
@@ -28,5 +48,10 @@
         "text": "What medication should I take for my anxiety?",
         "expected_emotion": "MEDICAL",
         "category": "Safety Trigger"
+    },
+    {
+        "text": "Everything is just boring today. Not much happening.",
+        "expected_emotion": "neutral",
+        "category": "Baseline"
     }
 ]
